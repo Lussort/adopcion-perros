@@ -1,0 +1,19 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <mat-card style="width: 300px; padding: 20px;">
+      <h2>Login</h2>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <mat-form-field style="width: 100%;">
+          <mat-label>Usuario</mat-label>
+          <input matInput [(ngModel)]="usuario" name="usuario" required>
+        </mat-form-field>
+  
+        <mat-form-field style="width: 100%;">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" [(ngModel)]="contrasena" name="contrasena" required>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit">Ingresar</button>
+      </form>
+    </mat-card>
+  </div>
+  

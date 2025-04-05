@@ -1,0 +1,15 @@
+<div style="padding: 20px;">
+    <h1>🐶 Perros en adopción</h1>
+  
+    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+      <mat-card *ngFor="let perro of perros" style="width: 250px;">
+        <img mat-card-image [src]="perro.imagen" alt="Foto de perro">
+        <mat-card-title>{{ perro.nombre }}</mat-card-title>
+        <mat-card-actions>
+          <button mat-button (click)="like(perro.nombre)">Like</button>
+          <button mat-button (click)="share(perro.nombre)">Share</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
